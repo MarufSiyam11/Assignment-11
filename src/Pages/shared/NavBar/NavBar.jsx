@@ -14,8 +14,7 @@ logOut()
     <li><Link to='/'>Home</Link></li>
     <li><Link to='/about'>About</Link></li>
     <li><Link to='/services'>Services</Link></li>
-    <li><Link to='/login'>Login</Link></li>
-    <li><Link to='/register'>Register</Link></li>
+    
 
   </>
   return (
@@ -39,9 +38,14 @@ logOut()
          {navItems}
         </ul>
       </div>
-      <div className="navbar-end">
+      <div className="dropdown dropdown-bottom dropdown-end">
       <button className="btn btn-outline btn-warning">Dashboard</button>
-      </div>
+  <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+  <li><Link to='/login'>Login</Link></li>
+    <li><Link to='/register'>Register</Link></li>
+  </ul>
+</div>
+      
       <div className="navbar-end">
 
           {
